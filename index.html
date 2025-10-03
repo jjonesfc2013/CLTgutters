@@ -1,575 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLT Gutters - Clean Gutters Fast | Professional Gutter Cleaning Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'trust-blue': '#0066cc',
-                        'speed-orange': '#ff6b35',
-                        'professional-gray': '#2d3748',
-                        'accent-green': '#10b981',
-                        'bright-yellow': '#ffd700'
-                    }
-                }
-            }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CLT Gutters | Gutter Cleaning for Property Managers — Charlotte NC</title>
+  <meta name="description" content="Fast, insured gutter cleaning for landlords & property managers across Charlotte. Photo proof on every job. 48-hour turnaround.">
+  <link rel="canonical" href="https://cltgutters.com/">
+
+  <!-- Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CLT Gutters — Charlotte NC">
+  <meta property="og:description" content="Fast, insured gutter cleaning. Photo proof. 48-hour turnaround.">
+  <meta property="og:image" content="https://i.imgur.com/Irl17cJ.jpeg">
+  <meta property="og:url" content="https://cltgutters.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0f172a",
+            stone: "#64748b",
+            brand: "#FF6600",           // email orange
+            dark: "#0b0b0b"
+          },
+          boxShadow: {
+            card: "0 8px 24px rgba(2,8,23,.08)"
+          },
+          maxWidth: { wrap: "1100px" }
         }
-    </script>
-    <style>
-        body {
-            box-sizing: border-box;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #0066cc 0%, #0080ff 50%, #00a3ff 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-gradient::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.3) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        .service-card {
-            transition: all 0.4s ease;
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-        }
-        .service-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 102, 204, 0.15);
-        }
-        .pulse-animation {
-            animation: pulse 2s infinite;
-            box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
-        }
-        @keyframes pulse {
-            0%, 100% { 
-                opacity: 1; 
-                box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
-            }
-            50% { 
-                opacity: 0.9; 
-                box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
-            }
-        }
-        .floating-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        .glow-effect {
-            filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.5));
-        }
-    </style>
+      }
+    }
+  </script>
+
+  <!-- LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"CLT Gutters",
+    "url":"https://cltgutters.com/",
+    "image":"https://i.imgur.com/Irl17cJ.jpeg",
+    "telephone":"+1-704-555-4888",
+    "areaServed":"Charlotte, NC",
+    "priceRange":"$$",
+    "description":"Gutter cleaning for landlords & property managers. Photo proof on every job. 48-hour turnaround."
+  }
+  </script>
+
+  <style>
+    .shadow-soft{ box-shadow:0 8px 24px rgba(2,8,23,.08) }
+    .ring-muted{ box-shadow: inset 0 0 0 1px rgba(100,116,139,.25) }
+  </style>
 </head>
-<body class="font-sans">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="text-2xl font-bold text-trust-blue">CLT Gutters</div>
-                    <div class="ml-2 text-sm text-professional-gray">CLTgutters.com</div>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-professional-gray hover:text-trust-blue transition-colors">Services</a>
-                    <a href="#why-us" class="text-professional-gray hover:text-trust-blue transition-colors">Why Choose Us</a>
-                    <a href="#contact" class="text-professional-gray hover:text-trust-blue transition-colors">Contact</a>
-                </div>
-                <button class="bg-speed-orange text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                    Get Quote
-                </button>
-            </div>
+<body class="bg-zinc-50 text-ink selection:bg-brand/20 selection:text-ink">
+
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur border-b border-zinc-200">
+    <nav class="max-w-wrap mx-auto px-4">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/" class="flex items-center gap-3" aria-label="CLT Gutters home">
+          <img src="https://i.imgur.com/VFjP3zX.png" alt="CLT Gutters" class="h-9 w-auto">
+        </a>
+        <div class="hidden md:flex items-center gap-7 text-[20px]">
+          <a class="hover:text-brand" href="#promises">Why Us</a>
+          <a class="hover:text-brand" href="#proof">Proof</a>
+          <a class="hover:text-brand" href="#contact">Contact</a>
         </div>
+        <div class="hidden md:flex items-center gap-2">
+          <a href="tel:+19803728082" class="px-3 py-2 rounded-lg border border-zinc-300 hover:bg-zinc-50 text-[14px]">Call (704) 555-4888</a>
+          <a href="https://form.jotform.com/252747791097067" class="px-4 py-2 rounded-lg bg-brand text-white hover:opacity-90 text-[14px] font-semibold">Schedule Cleaning</a>
+        </div>
+      </div>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white pt-24 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-5xl font-bold mb-6 leading-tight">
-                        Clean Gutters <span class="text-yellow-300">Fast</span>
-                    </h1>
-                    <p class="text-xl mb-8 text-blue-100">
-                        Professional gutter cleaning services trusted by property managers and landlords across Charlotte. Fast, reliable, and thorough cleaning that protects your investment.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-speed-orange text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-700 transition-colors pulse-animation">
-                            Schedule Service Now
-                        </button>
-                        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-trust-blue transition-colors">
-                            Property Manager Pricing
-                        </button>
-                    </div>
-                </div>
-                <div class="text-center floating-animation">
-                    <svg class="w-96 h-96 mx-auto" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Sophisticated architectural composition -->
-                        
-                        <!-- Background environment with depth -->
-                        <rect x="0" y="0" width="500" height="400" fill="url(#skyGradient)"/>
-                        
-                        <!-- Distant hills for depth -->
-                        <path d="M0 280 Q100 260 200 270 T400 275 L500 280 L500 400 L0 400 Z" fill="url(#hillGradient)" opacity="0.6"/>
-                        <path d="M0 300 Q150 285 300 290 T500 295 L500 400 L0 400 Z" fill="url(#hillGradient2)" opacity="0.4"/>
-                        
-                        <!-- Ground plane with perspective -->
-                        <path d="M0 320 L500 320 L500 400 L0 400 Z" fill="url(#groundGradient)"/>
-                        
-                        <!-- Modern luxury home - main structure -->
-                        <g transform="translate(50, 0)">
-                            <!-- Foundation with shadow -->
-                            <ellipse cx="200" cy="380" rx="180" ry="15" fill="rgba(0,0,0,0.1)"/>
-                            
-                            <!-- Main building mass -->
-                            <rect x="80" y="200" width="240" height="120" fill="url(#wallGradient)" stroke="none"/>
-                            
-                            <!-- Architectural details - horizontal lines -->
-                            <line x1="80" y1="220" x2="320" y2="220" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                            <line x1="80" y1="280" x2="320" y2="280" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
-                            
-                            <!-- Modern flat roof with slight angle -->
-                            <polygon points="70,200 200,180 330,200 320,190 200,170 80,190" fill="url(#roofGradient)"/>
-                            
-                            <!-- Roof edge detail -->
-                            <line x1="70" y1="200" x2="330" y2="200" stroke="rgba(0,0,0,0.2)" stroke-width="2"/>
-                            
-                            <!-- Large modern windows with realistic reflections -->
-                            <rect x="100" y="220" width="50" height="70" fill="url(#windowReflection)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
-                            <rect x="170" y="220" width="60" height="70" fill="url(#windowReflection)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
-                            <rect x="250" y="220" width="50" height="70" fill="url(#windowReflection)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
-                            
-                            <!-- Window frames and mullions -->
-                            <rect x="100" y="220" width="50" height="70" fill="none" stroke="rgba(100,100,100,0.8)" stroke-width="2"/>
-                            <line x1="125" y1="220" x2="125" y2="290" stroke="rgba(100,100,100,0.6)" stroke-width="1"/>
-                            <line x1="100" y1="255" x2="150" y2="255" stroke="rgba(100,100,100,0.6)" stroke-width="1"/>
-                            
-                            <rect x="170" y="220" width="60" height="70" fill="none" stroke="rgba(100,100,100,0.8)" stroke-width="2"/>
-                            <line x1="200" y1="220" x2="200" y2="290" stroke="rgba(100,100,100,0.6)" stroke-width="1"/>
-                            <line x1="170" y1="255" x2="230" y2="255" stroke="rgba(100,100,100,0.6)" stroke-width="1"/>
-                            
-                            <rect x="250" y="220" width="50" height="70" fill="none" stroke="rgba(100,100,100,0.8)" stroke-width="2"/>
-                            <line x1="275" y1="220" x2="275" y2="290" stroke="rgba(100,100,100,0.6)" stroke-width="1"/>
-                            <line x1="250" y1="255" x2="300" y2="255" stroke="rgba(100,100,100,0.6)" stroke-width="1"/>
-                            
-                            <!-- Modern entrance -->
-                            <rect x="185" y="290" width="30" height="30" fill="url(#doorGradient)" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
-                            <circle cx="208" cy="305" r="1.5" fill="#c0a060"/>
-                            
-                            <!-- Sophisticated gutter system -->
-                            <!-- Clean section with premium materials -->
-                            <rect x="70" y="195" width="130" height="8" fill="url(#premiumGutterClean)" stroke="rgba(0,0,0,0.2)" stroke-width="0.5" rx="4"/>
-                            
-                            <!-- Dirty/clogged section -->
-                            <rect x="200" y="195" width="130" height="8" fill="url(#premiumGutterDirty)" stroke="rgba(0,0,0,0.2)" stroke-width="0.5" rx="4"/>
-                            
-                            <!-- Professional downspouts -->
-                            <rect x="75" y="203" width="6" height="80" fill="url(#downspoutClean)" stroke="rgba(0,0,0,0.2)" stroke-width="0.5" rx="3"/>
-                            <rect x="319" y="203" width="6" height="80" fill="url(#downspoutDirty)" stroke="rgba(0,0,0,0.2)" stroke-width="0.5" rx="3"/>
-                            
-                            <!-- Water flow visualization - clean side -->
-                            <g opacity="0.8">
-                                <circle cx="78" cy="285" r="2" fill="#00d4aa">
-                                    <animate attributeName="cy" values="285;290;285" dur="1.5s" repeatCount="indefinite"/>
-                                    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.5s" repeatCount="indefinite"/>
-                                </circle>
-                                <circle cx="78" cy="295" r="1.5" fill="#00d4aa">
-                                    <animate attributeName="cy" values="295;300;295" dur="1.8s" repeatCount="indefinite"/>
-                                    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.8s" repeatCount="indefinite"/>
-                                </circle>
-                            </g>
-                            
-                            <!-- Debris visualization - dirty side -->
-                            <g opacity="0.7">
-                                <ellipse cx="210" cy="198" rx="3" ry="1.5" fill="#8b4513"/>
-                                <ellipse cx="220" cy="199" rx="2" ry="1" fill="#654321"/>
-                                <ellipse cx="235" cy="198" rx="4" ry="1.5" fill="#8b4513"/>
-                                <ellipse cx="250" cy="199" rx="2.5" ry="1" fill="#654321"/>
-                                <ellipse cx="265" cy="198" rx="3" ry="1.5" fill="#8b4513"/>
-                                <ellipse cx="280" cy="199" rx="2" ry="1" fill="#654321"/>
-                                <ellipse cx="295" cy="198" rx="3.5" ry="1.5" fill="#8b4513"/>
-                            </g>
-                            
-                            <!-- Professional status indicators -->
-                            <rect x="110" y="240" width="80" height="18" fill="rgba(16, 185, 129, 0.95)" rx="9" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                            <text x="150" y="252" fill="white" font-size="11" font-weight="600" text-anchor="middle" font-family="Arial, sans-serif">MAINTAINED</text>
-                            
-                            <rect x="210" y="240" width="80" height="18" fill="rgba(220, 38, 38, 0.95)" rx="9" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                            <text x="250" y="252" fill="white" font-size="11" font-weight="600" text-anchor="middle" font-family="Arial, sans-serif">NEGLECTED</text>
-                        </g>
-                        
-                        <!-- Dynamic speed indicators -->
-                        <g stroke="#ffd700" stroke-width="3" opacity="0.9" stroke-linecap="round">
-                            <line x1="20" y1="150" x2="45" y2="150">
-                                <animate attributeName="x1" values="20;25;20" dur="0.6s" repeatCount="indefinite"/>
-                                <animate attributeName="x2" values="45;50;45" dur="0.6s" repeatCount="indefinite"/>
-                            </line>
-                            <line x1="25" y1="165" x2="40" y2="165">
-                                <animate attributeName="x1" values="25;30;25" dur="0.8s" repeatCount="indefinite"/>
-                                <animate attributeName="x2" values="40;45;40" dur="0.8s" repeatCount="indefinite"/>
-                            </line>
-                            <line x1="30" y1="180" x2="35" y2="180">
-                                <animate attributeName="x1" values="30;35;30" dur="1s" repeatCount="indefinite"/>
-                                <animate attributeName="x2" values="35;40;35" dur="1s" repeatCount="indefinite"/>
-                            </line>
-                        </g>
-                        
-                        <!-- Professional certification badge -->
-                        <g transform="translate(420, 60)">
-                            <circle cx="0" cy="0" r="28" fill="url(#certificationGradient)" stroke="#ffd700" stroke-width="2"/>
-                            <circle cx="0" cy="0" r="22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                            <text x="0" y="-5" fill="white" font-size="9" font-weight="700" text-anchor="middle" font-family="Arial, sans-serif">CERTIFIED</text>
-                            <text x="0" y="8" fill="#ffd700" font-size="7" font-weight="600" text-anchor="middle" font-family="Arial, sans-serif">PROFESSIONAL</text>
-                        </g>
-                        
-                        <!-- Sophisticated gradient definitions -->
-                        <defs>
-                            <!-- Sky gradient -->
-                            <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
-                                <stop offset="70%" style="stop-color:#e0f6ff;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#f0f8ff;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <!-- Hill gradients for depth -->
-                            <linearGradient id="hillGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" style="stop-color:#8fbc8f;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#556b2f;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <linearGradient id="hillGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" style="stop-color:#9acd32;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#6b8e23;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <!-- Ground gradient -->
-                            <linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" style="stop-color:#90ee90;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#228b22;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <!-- Wall gradient with realistic lighting -->
-                            <linearGradient id="wallGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#e8e8e8;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#d3d3d3;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <!-- Roof gradient -->
-                            <linearGradient id="roofGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#696969;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#2f4f4f;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#1c1c1c;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <!-- Window reflection gradient -->
-                            <linearGradient id="windowReflection" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:0.8" />
-                                <stop offset="30%" style="stop-color:#ffffff;stop-opacity:0.4" />
-                                <stop offset="70%" style="stop-color:#4682b4;stop-opacity:0.6" />
-                                <stop offset="100%" style="stop-color:#191970;stop-opacity:0.8" />
-                            </linearGradient>
-                            
-                            <!-- Door gradient -->
-                            <linearGradient id="doorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#8b4513;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#a0522d;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <!-- Premium gutter gradients -->
-                            <linearGradient id="premiumGutterClean" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#10b981;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <linearGradient id="premiumGutterDirty" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#6b7280;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#4b5563;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#374151;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <!-- Downspout gradients -->
-                            <linearGradient id="downspoutClean" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#00d4aa;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.3" />
-                                <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <linearGradient id="downspoutDirty" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#6b7280;stop-opacity:1" />
-                                <stop offset="50%" style="stop-color:#9ca3af;stop-opacity:0.5" />
-                                <stop offset="100%" style="stop-color:#374151;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <!-- Certification badge gradient -->
-                            <radialGradient id="certificationGradient" cx="50%" cy="30%" r="70%">
-                                <stop offset="0%" style="stop-color:#0080ff;stop-opacity:1" />
-                                <stop offset="70%" style="stop-color:#0066cc;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
-                            </radialGradient>
-                        </defs>
-                    </svg>
-                </div>
+  <!-- Hero -->
+  <section class="pt-20 md:pt-24 relative">
+    <div class="relative">
+      <img src="https://i.imgur.com/Irl17cJ.jpeg" alt="Charlotte home exterior with clean gutters"
+           class="w-full h-[60vh] md:h-[72vh] object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+      <div class="absolute inset-0">
+        <div class="max-w-wrap mx-auto px-4 h-full flex items-center">
+          <div class="max-w-2xl text-white">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+              Gutters Clean. Water Controlled. Homes Protected.
+            </h1>
+            <p class="mt-3 md:mt-4 text-white/90 text-base md:text-lg">
+              Fast, insured gutter cleaning for landlords & property managers across Charlotte. Photo proof on every job.
+            </p>
+            <div class="mt-5 md:mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="https://form.jotform.com/252747791097067" class="px-5 py-3 rounded-lg bg-brand text-white font-semibold shadow-soft text-center">Schedule Cleaning ($145)</a>
+              <a href="tel:+19803728082" class="px-5 py-3 rounded-lg bg-white/90 text-ink font-semibold hover:bg-white text-center">Call (704) 555-4888</a>
             </div>
+            <p class="mt-3 text-xs md:text-sm text-white/80">48-hour turnaround • Portfolio rate from $115/house • Insured • Photo proof</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Trust Indicators -->
-    <section class="bg-gradient-to-r from-blue-50 via-white to-orange-50 py-12 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-10 left-10 w-20 h-20 bg-trust-blue rounded-full"></div>
-            <div class="absolute top-20 right-20 w-16 h-16 bg-speed-orange rounded-full"></div>
-            <div class="absolute bottom-10 left-1/4 w-12 h-12 bg-accent-green rounded-full"></div>
-            <div class="absolute bottom-20 right-1/3 w-14 h-14 bg-bright-yellow rounded-full"></div>
+  <!-- Promises / Why Us (from email) -->
+  <section id="promises" class="max-w-wrap mx-auto px-4 py-12">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Built for Landlords and Property Managers</h2>
+      <p class="mt-2 text-stone text-[15px]">Speed, Documentation, and Predictable Pricing.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <article class="rounded-xl bg-white shadow-soft p-6 ring-muted">
+        <div class="flex items-center gap-3">
+          <svg class="w-6 h-6 text-brand" viewBox="0 0 24 24"><path fill="currentColor" d="M12 8v5l4 2M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20"/></svg>
+          <h3 class="font-semibold">48-Hour Turnaround</h3>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-3xl font-bold text-trust-blue mb-2">500+</div>
-                    <div class="text-professional-gray">Properties Serviced</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold text-trust-blue mb-2">24hr</div>
-                    <div class="text-professional-gray">Response Time</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold text-trust-blue mb-2">100%</div>
-                    <div class="text-professional-gray">Insured & Bonded</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold text-trust-blue mb-2">5★</div>
-                    <div class="text-professional-gray">Average Rating</div>
-                </div>
-            </div>
+        <p class="mt-2 text-stone text-[15px]">Confirm the date; we clean within 48 hours. Emergency clear available.</p>
+      </article>
+      <article class="rounded-xl bg-white shadow-soft p-6 ring-muted">
+        <div class="flex items-center gap-3">
+          <svg class="w-6 h-6 text-brand" viewBox="0 0 24 24"><path fill="currentColor" d="M4 10h16v2H4zM6 14h12v2H6zM8 18h8v2H8z"/></svg>
+          <h3 class="font-semibold">Portfolio Pricing</h3>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-professional-gray mb-4">Professional Services</h2>
-                <p class="text-xl text-gray-600">Comprehensive gutter solutions for property professionals</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-trust-blue to-transparent opacity-10 rounded-bl-full"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-trust-blue to-blue-600 rounded-lg flex items-center justify-center mb-6 shadow-lg">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-professional-gray mb-4">Gutter Cleaning</h3>
-                    <p class="text-gray-600 mb-6">Complete debris removal, downspout clearing, and flow testing. Before/after photos included.</p>
-                    <div class="text-speed-orange font-bold text-lg">Starting at $89</div>
-                </div>
-                
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-speed-orange to-transparent opacity-10 rounded-bl-full"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-speed-orange to-orange-600 rounded-lg flex items-center justify-center mb-6 shadow-lg">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-professional-gray mb-4">Property Management</h3>
-                    <p class="text-gray-600 mb-6">Scheduled maintenance programs with detailed reporting and tenant coordination.</p>
-                    <div class="text-speed-orange font-bold text-lg">Custom Pricing</div>
-                </div>
-                
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-accent-green to-transparent opacity-10 rounded-bl-full"></div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent-green to-green-600 rounded-lg flex items-center justify-center mb-6 shadow-lg">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M12 6V4l-2-2H6a2 2 0 00-2 2v16a2 2 0 002 2h8a2 2 0 002-2V8l-4-2zM8 18v-2h4v2H8zm0-4v-2h4v2H8zm0-4V8h2v2H8z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-professional-gray mb-4">Emergency Service</h3>
-                    <p class="text-gray-600 mb-6">24/7 emergency gutter clearing for storm damage and overflow situations.</p>
-                    <div class="text-speed-orange font-bold text-lg">Call for Pricing</div>
-                </div>
-            </div>
+        <p class="mt-2 text-stone text-[15px]"><span class="font-semibold">$115/house</span> for 5+ properties. Consolidated invoicing & reporting.</p>
+      </article>
+      <article class="rounded-xl bg-white shadow-soft p-6 ring-muted">
+        <div class="flex items-center gap-3">
+          <svg class="w-6 h-6 text-brand" viewBox="0 0 24 24"><path fill="currentColor" d="M4 7h3l2-2h6l2 2h3v12H4zM12 9a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 9z"/></svg>
+          <h3 class="font-semibold">Photo Proof Every Job</h3>
         </div>
-    </section>
+        <p class="mt-2 text-stone text-[15px]">Before/after images delivered for your records and owner updates.</p>
+      </article>
+    </div>
+  </section>
 
-    <!-- Why Choose Us -->
-    <section id="why-us" class="py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-orange-50 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-1/4 left-10 w-32 h-32 bg-trust-blue rounded-full blur-xl"></div>
-            <div class="absolute bottom-1/4 right-10 w-40 h-40 bg-speed-orange rounded-full blur-xl"></div>
+  <!-- Proof (Before/After) -->
+  <section id="proof" class="bg-white">
+    <div class="max-w-wrap mx-auto px-4 py-12">
+      <div class="text-center mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Before & After</h2>
+        <p class="mt-2 text-stone text-[15px]">Real results from recent cleanings.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <figure class="rounded-xl overflow-hidden shadow-soft ring-muted bg-white">
+          <img src="https://i.imgur.com/WMNLSsZ.jpeg" alt="Before gutter cleaning" class="w-full h-72 object-cover">
+          <figcaption class="px-4 py-2 text-sm text-stone border-t">Before</figcaption>
+        </figure>
+        <figure class="rounded-xl overflow-hidden shadow-soft ring-muted bg-white">
+          <img src="https://i.imgur.com/fnVCMzP.jpeg" alt="After gutter cleaning" class="w-full h-72 object-cover">
+          <figcaption class="px-4 py-2 text-sm text-stone border-t">After</figcaption>
+        </figure>
+      </div>
+      <div class="text-center mt-8">
+        <a href="https://form.jotform.com/252747791097067" class="inline-block px-5 py-3 rounded-lg bg-brand text-white font-semibold shadow-soft">Schedule a Pilot Cleaning</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Quote -->
+  <section id="contact" class="bg-zinc-50 border-y border-zinc-200">
+    <div class="max-w-wrap mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Request a Quote</h2>
+          <p class="mt-2 text-stone text-[15px]">Send the address and we’ll confirm your date. Photo proof on completion.</p>
+          <ul class="mt-4 space-y-2 text-[15px] text-ink">
+            <li>• Licensed & insured</li>
+            <li>• 48-hour standard turnaround</li>
+            <li>• Portfolio pricing for 5+ properties</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="tel:+19803728082" class="px-4 py-2 rounded-lg border border-zinc-300 hover:bg-zinc-100 text-[14px]">Call (704) 555-4888</a>
+            <a href="https://form.jotform.com/252747791097067" class="px-4 py-2 rounded-lg bg-brand text-white text-[14px] font-semibold">Schedule Pilot</a>
+          </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold text-professional-gray mb-6">Why Property Professionals Choose CLT Gutters</h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-6 h-6 bg-trust-blue rounded-full flex items-center justify-center mt-1 mr-4">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-professional-gray mb-2">Licensed & Insured</h3>
-                                <p class="text-gray-600">Full liability coverage and workers compensation for your peace of mind.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-6 h-6 bg-trust-blue rounded-full flex items-center justify-center mt-1 mr-4">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-professional-gray mb-2">Detailed Reporting</h3>
-                                <p class="text-gray-600">Before/after photos and maintenance reports for your records.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-6 h-6 bg-trust-blue rounded-full flex items-center justify-center mt-1 mr-4">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-professional-gray mb-2">Volume Discounts</h3>
-                                <p class="text-gray-600">Special pricing for multiple properties and recurring services.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-2xl border border-gray-100 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-trust-blue via-speed-orange to-accent-green"></div>
-                    <h3 class="text-2xl font-bold text-professional-gray mb-6 relative">
-                        Get Your Quote
-                        <div class="absolute -bottom-2 left-0 w-16 h-1 bg-speed-orange rounded-full"></div>
-                    </h3>
-                    <form class="space-y-4" onsubmit="handleQuoteSubmission(event)">
-                        <div>
-                            <label class="block text-sm font-medium text-professional-gray mb-2">Property Type</label>
-                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-trust-blue focus:border-transparent">
-                                <option>Single Family Home</option>
-                                <option>Multi-Family Property</option>
-                                <option>Commercial Building</option>
-                                <option>Property Portfolio</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-professional-gray mb-2">Number of Properties</label>
-                            <input type="number" min="1" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-trust-blue focus:border-transparent" placeholder="1">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-professional-gray mb-2">Contact Information</label>
-                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-trust-blue focus:border-transparent" placeholder="your@email.com">
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-speed-orange text-white py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                            Get Professional Quote
-                        </button>
-                    </form>
-                </div>
-            </div>
+
+        <!-- Simple email form (Formspree placeholder). Replace with your endpoint if you want inbox delivery. -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="bg-white rounded-xl shadow-soft ring-muted p-6 space-y-4">
+          <input name="name" required placeholder="Full Name" class="border rounded-lg p-3 w-full">
+          <input type="tel" name="phone" required placeholder="Phone" class="border rounded-lg p-3 w-full">
+          <input type="email" name="email" placeholder="Email" class="border rounded-lg p-3 w-full">
+          <input name="address" required placeholder="Service Address" class="border rounded-lg p-3 w-full">
+          <textarea name="message" placeholder="Notes (optional)" class="border rounded-lg p-3 w-full h-28"></textarea>
+          <input type="text" name="_gotcha" style="display:none">
+          <button class="w-full px-5 py-3 rounded-lg bg-brand text-white font-semibold">Send Request</button>
+          <p class="text-[12px] text-stone">Prefer not to use the form? Email <a class="underline" href="mailto:hello@cltgutters.com">hello@cltgutters.com</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white">
+    <div class="max-w-wrap mx-auto px-4 py-10">
+      <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="https://i.imgur.com/VFjP3zX.png" alt="CLT Gutters" class="h-9 w-auto">
+          <div class="text-sm text-white/80">Charlotte, NC • (980) 372-8082</div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-trust-blue text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold mb-6">Ready to Get Started?</h2>
-            <p class="text-xl text-blue-100 mb-8">Professional gutter cleaning services you can trust</p>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div>
-                    <div class="text-2xl font-bold mb-2">📞 Call Now</div>
-                    <div class="text-blue-100">(704) 555-GUTTER</div>
-                </div>
-                <div>
-                    <div class="text-2xl font-bold mb-2">📧 Email Us</div>
-                    <div class="text-blue-100">info@CLTgutters.com</div>
-                </div>
-                <div>
-                    <div class="text-2xl font-bold mb-2">🌐 Website</div>
-                    <div class="text-blue-100">CLTgutters.com</div>
-                </div>
-            </div>
-            
-            <button class="bg-speed-orange text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-700 transition-colors">
-                Schedule Your Service Today
-            </button>
+        <div class="text-sm text-white/70">
+          © <span id="y"></span> CLT Gutters. All rights reserved.
+          &nbsp;•&nbsp; <a href="https://effervescent-piroshki-255aef.netlify.app/" class="underline">View Email Campaign</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="bg-professional-gray text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="text-xl font-bold mb-2">CLT Gutters</div>
-            <div class="text-gray-400 mb-4">Professional Gutter Cleaning Services | Charlotte, NC</div>
-            <div class="text-sm text-gray-400">
-                Licensed • Insured • Bonded | Serving Property Managers & Landlords Since 2020
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function handleQuoteSubmission(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(event.target);
-            
-            // Show success message
-            alert('Thank you for your quote request! We will contact you within 24 hours with a professional estimate.');
-            
-            // Reset form
-            event.target.reset();
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add click handlers for CTA buttons
-        document.querySelectorAll('button').forEach(button => {
-            if (button.type !== 'submit') {
-                button.addEventListener('click', function() {
-                    if (this.textContent.includes('Quote') || this.textContent.includes('Schedule')) {
-                        document.querySelector('#contact').scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            }
-        });
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98684fe7e1ef44cf',t:'MTc1OTExNTY4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
 </html>
+
